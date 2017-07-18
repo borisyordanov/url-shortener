@@ -7,6 +7,7 @@ submitBtn.addEventListener('click', () => {
     fetch(`/new/${input.value}`)
         .then(resp => resp.json())
         .then(function(data) {
+        	console.log(data);
             originalURL.textContent = data.originalURL;
             originalURL.setAttribute('href', data.originalURL);
             shortURL.textContent = window.location.href + data.shortURL;
