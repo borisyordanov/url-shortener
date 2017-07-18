@@ -3,7 +3,7 @@ const submitBtn = document.querySelector('#submit');
 const originalURL = document.querySelector('#original-url');
 const shortURL = document.querySelector('#short-url');
 
-submit.addEventListener('click', () => {
+submitBtn.addEventListener('click', () => {
     fetch(`/new/${input.value}`)
         .then(resp => resp.json())
         .then(function(data) {
